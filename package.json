@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/gforti/doc-samples/issues"
   },
-  "homepage": "https://github.com/gforti/doc-samples#readme"
+  "homepage": "https://github.com/gforti/doc-samples#readme",
+   "release": {
+    "branches": ["main"]
+  }
 }
