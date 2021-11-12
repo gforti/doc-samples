@@ -1,3 +1,15 @@
+# [2.2.0](https://github.com/gforti/doc-samples/compare/v2.1.0...v2.2.0) (2021-11-12)
+
+
+### Bug Fixes
+
+* will this generate without creds ([#2](https://github.com/gforti/doc-samples/issues/2)) ([8fa8fd8](https://github.com/gforti/doc-samples/commit/8fa8fd8e771d1aaaf7bfc4eb9728029a7fad08db))
+
+
+### Features
+
+* bypass protection ([37b177d](https://github.com/gforti/doc-samples/commit/37b177dd330d2cb03afb69ea0cde781c83c7a670))
+
 # [2.1.0](https://github.com/gforti/doc-samples/compare/v2.0.0...v2.1.0) (2021-11-12)
 
 
