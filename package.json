@@ -18,9 +18,6 @@
   },
   "homepage": "https://github.com/gforti/doc-samples#readme",
   "release": {
-    "branches": [
-      "main"
-    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
