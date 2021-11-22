@@ -1,8 +1,6 @@
 name: Release
-on:
-  push:
-    branches:
-      - main
+on: [workflow_dispatch]
+
 jobs:
   release:
     name: Release
@@ -19,39 +17,7 @@ jobs:
       - name: Install dependencies
         run: npm install @semantic-release/git @semantic-release/changelog
       
-      - name: Branch protection OFF
-        uses: octokit/request-action@v2.x
-        with:
-          route: PUT /repos/:repository/branches/main/protection
-          repository: ${{ github.repository }}
-          required_pull_request_reviews: |
-            null
-          required_status_checks: |
-            null
-          enforce_admins: |
-            null
-          restrictions: | 
-            null 
-        env:
-          GITHUB_TOKEN: ${{ secrets.ALLOW_MERGE }}
-      
       - name: Release
         env:
-          GITHUB_TOKEN: ${{ secrets.ALLOW_MERGE }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
-
-      - name: Branch protection ON
-        uses: octokit/request-action@v2.x
-        with:
-          route: PUT /repos/:repository/branches/main/protection
-          repository: ${{ github.repository }}
-          required_pull_request_reviews: |
-            required_approving_review_count: 1       
-          required_status_checks: |
-            null
-          enforce_admins: |
-              null
-          restrictions: | 
-              null
-        env:
-          GITHUB_TOKEN: ${{ secrets.ALLOW_MERGE }}
